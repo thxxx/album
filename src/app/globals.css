@@ -1,6 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Jersey+20&family=Jersey+25&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-jersey-15 {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-jersey-10 {
+  font-family: "Jersey 10", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-jersey-20 {
+  font-family: "Jersey 20", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-jersey-25 {
+  font-family: "Jersey 25", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --background: #ffffff;
@@ -17,5 +43,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
