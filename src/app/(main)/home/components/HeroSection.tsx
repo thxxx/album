@@ -13,9 +13,9 @@ function HeroSection() {
         <br />
         only for you
       </h3>
-      <div className="text-[0.9em] md:text-[1em] mt-4 text-gray-500 w-full flex-wrap text-wrap px-8">
+      <div className="text-[0.9em] md:text-[1.1em] mt-4 text-gray-500 w-full flex-wrap text-wrap px-8">
         With just one click, get a{" "}
-        <strong className="text-gray-900">uniquely designed album cover</strong>{" "}
+        <span className="text-gray-900">uniquely designed album cover</span>{" "}
         crafted through a model optimized for album cover images.
         {/* 한번의 클릭으로 앨범 커버 이미지에 최적화된 모델을 통해 완성된 디자인의{" "}
         <strong className="text-gray-900">유니크한 앨범 커버</strong>를
