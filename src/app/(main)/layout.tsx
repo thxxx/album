@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Provider } from "@/components/ui/provider";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

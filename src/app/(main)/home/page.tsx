@@ -17,11 +17,9 @@ import { v4 } from "uuid";
 import FeatureSection4 from "./components/FeatureSection4";
 import { insertLog } from "@/service/logService";
 // import { useRouter } from "next/navigation";
-import { useUserStore } from "@/store/useUserState";
 
 const Home = () => {
   const { isPreApplyModalOpen, setIsPreApplyModalOpen } = useModalStore();
-  const { setLang } = useUserStore();
   // const router = useRouter();
 
   const addLog = async () => {
