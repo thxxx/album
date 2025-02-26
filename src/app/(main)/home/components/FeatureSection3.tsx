@@ -7,13 +7,18 @@ function FeatureSection3() {
       <div className="bg-gray-100 rounded-[8px] flex flex-col w-full h-full p-6 justify-between items-center">
         <div>
           <div className="font-bold text-[1.2em] leading-7 tracking-tight">
-            생성된 이미지에 대한 저작권을 제공하고
+            Full copyright ownership is provided,
             <br />
-            상업적 이용도 가능합니다.
+            allowing for commercial use.
+            {/* 생성된 이미지에 대한 저작권을 제공하고
+            <br />
+            상업적 이용도 가능합니다. */}
           </div>
           <div className="text-gray-500 text-[0.875em] mt-2">
-            생성된 커버 이미지의 저작권을 제공하며, 상업적 용도로도 자유롭게
-            사용하실 수 있습니다.
+            The generated cover image comes with complete copyright, and you’re
+            free to use it commercially.
+            {/* 생성된 커버 이미지의 저작권을 제공하며, 상업적 용도로도 자유롭게
+            사용하실 수 있습니다. */}
           </div>
         </div>
         <Image

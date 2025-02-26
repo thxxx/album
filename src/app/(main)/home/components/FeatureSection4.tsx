@@ -13,14 +13,20 @@ function FeatureSection3() {
           className=""
         />
         <div className="font-bold text-[1.2em] leading-7 tracking-tight text-white mt-4">
-          최고 퀄리티의 앨범 커버를
+          Get the highest quality album covers
+          <br /> with just one input
+          {/* 최고 퀄리티의 앨범 커버를
           <br />
-          한번의 입력으로
+          한번의 입력으로 */}
         </div>
         <div className="text-gray-400 text-[0.875em] mt-2">
-          sleeve studio는 몇십 장의 이미지를 생성하고 그 중 가장 적합한
-          이미지만을 선택합니다. 또한, 해당 이미지가 적합한 이유를 함께 제공하여
-          판단을 도와드립니다.
+          Sleeve Studio generates dozens of images, selects the most suitable
+          ones, and delivers <strong className="text-white">10 </strong>distinct
+          options. We also explain why each image is the best.
+          {/* sleeve studio는 몇십 장의 이미지를 생성하고 그 중 가장 적합한
+          이미지만을 선택하여 각기 다른{" "}
+          <strong className="text-white">10장</strong>의 이미지를 드립니다.
+          또한, 해당 이미지가 적합한 이유를 함께 제공하여 판단을 도와드립니다. */}
         </div>
       </div>
     </div>

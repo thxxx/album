@@ -67,7 +67,9 @@ export const Modal = ({
       >
         {/* subButton(generate modal에서 쓰임) */}
         <div className="flex justify-between items-center px-6 pt-6 pb-3">
-          {title && <h2 className="text-lg font-semibold">{title}</h2>}
+          {title && (
+            <h2 className="text-lg font-semibold text-left">{title}</h2>
+          )}
           {onClickSubButton && (
             <button
               onClick={onClickSubButton}

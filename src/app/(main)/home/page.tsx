@@ -15,21 +15,41 @@ import { useModalStore } from "@/store/useModalState";
 import ApplyModal from "./components/ApplyModal";
 import { v4 } from "uuid";
 import FeatureSection4 from "./components/FeatureSection4";
+import { insertLog } from "@/service/logService";
+import { useSearchParams } from "next/navigation";
+import { useUserStore } from "@/store/useUserState";
 
 const Home = () => {
   const { isPreApplyModalOpen, setIsPreApplyModalOpen } = useModalStore();
+  const { setLang } = useUserStore();
+  const searchParams = useSearchParams();
 
   const addLog = async () => {
     const getLodId = localStorage.getItem("logId");
     if (!getLodId) {
       const logid = v4();
       localStorage.setItem("logId", logid);
+
+      const body = {
+        log_id: logid,
+        action: "enter",
+      };
+      const res = await insertLog(body);
+      console.log("엔터 로그 주입 ", res);
+    } else {
+      const body = {
+        log_id: getLodId,
+        action: "enter_agian",
+      };
+      await insertLog(body);
     }
   };
 
   useEffect(() => {
+    const locale = searchParams.get("locale"); // locale 값 가져오기
+    if (locale === "en" || locale === "ko") setLang(locale);
     addLog();
-  }, []);
+  }, [searchParams, setLang]);
 
   return (
     <Layout>

@@ -16,8 +16,8 @@ function Teamintro() {
       </div>
       <Image
         src="/img/covers.png"
-        width={240}
-        height={240}
+        width={260}
+        height={260}
         alt="logo"
         className="mt-0"
       />
