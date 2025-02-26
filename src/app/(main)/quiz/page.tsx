@@ -2,15 +2,11 @@
 
 import React, { useEffect } from "react";
 import Layout from "../layout";
-import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase";
 
 const Quiz = () => {
-  const router = useRouter();
-
   const loadQuizes = async () => {
-    const res = await supabase.from("items").select();
-    console.log("res", res);
+    // const res = await supabase.from("items").select();
+    // console.log("res", res);
   };
 
   useEffect(() => {
