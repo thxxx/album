@@ -16,13 +16,13 @@ import ApplyModal from "./components/ApplyModal";
 import { v4 } from "uuid";
 import FeatureSection4 from "./components/FeatureSection4";
 import { insertLog } from "@/service/logService";
-import { useSearchParams } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { useUserStore } from "@/store/useUserState";
 
 const Home = () => {
   const { isPreApplyModalOpen, setIsPreApplyModalOpen } = useModalStore();
   const { setLang } = useUserStore();
-  const searchParams = useSearchParams();
+  // const router = useRouter();
 
   const addLog = async () => {
     const getLodId = localStorage.getItem("logId");
@@ -46,10 +46,10 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const locale = searchParams.get("locale"); // locale 값 가져오기
-    if (locale === "en" || locale === "ko") setLang(locale);
+    // const locale = router.query.locale;
+    // if (locale === "en" || locale === "ko") setLang(locale);
     addLog();
-  }, [searchParams, setLang]);
+  }, []);
 
   return (
     <Layout>
