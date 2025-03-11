@@ -11,7 +11,7 @@ function HeroSection() {
       <h3 className="text-3xl font-bold md:text-5xl">
         Make a perfect artwork
         <br />
-        only for you
+        only for your song
       </h3>
       <div className="text-[0.9em] md:text-[1.1em] mt-4 text-gray-500 w-full flex-wrap text-wrap px-8">
         With just one click, get a{" "}

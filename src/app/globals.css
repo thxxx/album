@@ -57,8 +57,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(239, 239, 239, 1) 1px, transparent 1px),
-      linear-gradient(to right, rgba(239, 239, 239, 1) 1px, transparent 1px),
+    background: linear-gradient(rgba(232, 232, 232, 1) 1px, transparent 1px),
+      linear-gradient(to right, rgba(232, 232, 232, 1) 1px, transparent 1px),
       #ffffff;
     background-size:
       40px 40px,

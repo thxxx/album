@@ -9,11 +9,9 @@ function LastSection() {
   const { setIsPreApplyModalOpen } = useModalStore();
 
   return (
-    <div className="p-4 w-full max-w-[480px] mt-4">
-      <div className="text-[0.9em] border border-gray-200 text-gray-500 w-full flex-wrap text-wrap px-8 flex flex-col gap-2 relative py-8">
+    <div className="p-4 w-[100vw] mt-[10vh] py-12 bg-black flex justify-center items-center">
+      {/* <div className="text-[0.9em] border border-gray-200 text-gray-500 w-full flex-wrap text-wrap px-8 flex flex-col gap-2 relative py-8">
         <div className="bg-grid-layout"></div>
-        {/* 그리드 페이드 효과 */}
-        {/* <div className="bg-grid-fade absolute top-0 left-0"></div> */}
         <div
           className="text-gray-900 font-bold text-xl z-10"
           style={{
@@ -24,19 +22,13 @@ function LastSection() {
         >
           Why Sleeve Studio
         </div>
-        {/* <div>- 앨범 커버에 최적화된 모델 ✅</div> */}
         <div className="z-10">- Optimized model for album covers ✅</div>
-        {/* <div>
-        - 반복작업 없이 한번의 정확한 입력으로
-        <br />
-        서로다른 10장의 유니크한 앨범 커버를 ✅
-      </div> */}{" "}
         <div className="z-10">
           - Generate 10 unique album covers with a single, precise input — no
           repetitive work required ✅
         </div>
-      </div>
-      <div className="p-6 border mt-[15vh] border-gray-300 bg-black text-white rounded-[8px] flex items-start justify-center flex-col">
+      </div> */}
+      <div className="w-full max-w-[800px] p-6 text-white rounded-[8px] flex items-start justify-center flex-col">
         <div className="text-2xl font-extrabold font-jersey-10">
           click to start.wav
         </div>

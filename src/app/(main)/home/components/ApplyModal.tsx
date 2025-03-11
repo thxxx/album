@@ -55,11 +55,11 @@ const ApplyModal = ({ isModalOpen, setIsModalOpen }: ApplyModalProps) => {
               Thanks for joining our waitlist!&nbsp;
               <br />
             </>
-          )}
+          )}{" "}
           We{"'"}ll let you know as soon as the service is launched.
           <br />
           <div className="text-gray-400 text-[15px] mt-2">
-            Sleeve will be released at 2025.02.27
+            Sleeve will be released at 2025.03.21
           </div>
         </div>
         {!submitted && (
