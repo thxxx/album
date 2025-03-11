@@ -22,7 +22,7 @@ function HeroSection() {
         가져가세요. */}
       </div>
       <button
-        className="bg-new-black rounded-full text-white px-8 py-2 text-lg font-normal mt-8"
+        className="bg-new-black rounded-full text-white px-8 py-2 text-lg font-normal mt-8 hover:opacity-90"
         onClick={() => {
           setIsPreApplyModalOpen(true);
           addLog("hero-btn");
@@ -30,6 +30,7 @@ function HeroSection() {
       >
         Try for free
       </button>
+      <div className="text-gray-700 mt-2">1000 + in waitlist</div>
       <div className="flex relative items-center justify-center mt-[12vh]">
         <Image
           src="/img/heroimg.png"

@@ -54,9 +54,6 @@ const Home = () => {
       <div className="bg-white flex justify-center items-center text-center flex-col w-full">
         {/* header */}
         <Header />
-        <br />
-        <br />
-        <br />
         {/* hero */}
         <HeroSection />
         {/* Team intro */}

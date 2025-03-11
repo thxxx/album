@@ -44,19 +44,19 @@ const ApplyModal = ({ isModalOpen, setIsModalOpen }: ApplyModalProps) => {
     <Modal
       isOpen={isModalOpen}
       onClose={handleClose}
-      title={submitted ? "Submitted" : "Apply"}
+      title={submitted ? "Submitted" : "Join"}
     >
       <div className="w-full text-[1em] text-gray-800 flex flex-col justify-start items-start">
         <div className="text-left">
           {!submitted ? (
-            <>Please leave a email with a comment.</>
+            <>Please leave an email and a comment.</>
           ) : (
             <>
               Thanks for joining our waitlist!&nbsp;
               <br />
             </>
           )}{" "}
-          We{"'"}ll let you know as soon as the service is launched.
+          We{"'"}ll notify you as soon as the service launches.
           <br />
           <div className="text-gray-400 text-[15px] mt-2">
             Sleeve will be released at 2025.03.21
