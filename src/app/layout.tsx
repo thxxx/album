@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sleeve studio",
-  description: "The Best cover image",
+  description: "The Best album cover image generation with one click",
 };
 
 export default function RootLayout({
