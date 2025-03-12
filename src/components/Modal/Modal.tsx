@@ -8,7 +8,7 @@ interface ModalProps {
   title?: string;
   onSubmit?: () => void;
   submitText?: string;
-  large?: boolean;
+  isActive?: boolean;
   isHr?: boolean;
 }
 
@@ -19,7 +19,7 @@ export const Modal = ({
   title,
   onSubmit,
   submitText,
-  large,
+  isActive = true,
   isHr = true,
 }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
@@ -63,7 +63,7 @@ export const Modal = ({
         ref={modalRef}
         className={`modal-content relative z-10 bg-white rounded-lg shadow-xl w-full max-w-md mx-4 transform transition-all duration-300 ${
           isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-        } ${large ? "max-w-xl" : ""}`}
+        }`}
       >
         {/* subButton(generate modal에서 쓰임) */}
         <div className="flex justify-between items-center px-6 pt-6 pb-3">
@@ -94,8 +94,11 @@ export const Modal = ({
             cancel
           </button>
           <button
+            disabled={!isActive}
             onClick={onSubmit}
-            className="text-white bg-gray-900 rounded-md w-full text-center py-2 font-medium whitespace-nowrap hover:opacity-90"
+            className={`rounded-md w-full text-center py-2 font-medium whitespace-nowrap hover:opacity-90
+              ${isActive ? "text-white bg-gray-900 cursor-pointer" : "text-gray-600 bg-gray-300 cursor-not-allowed"}
+              `}
           >
             {submitText ? submitText : "submit"}
           </button>

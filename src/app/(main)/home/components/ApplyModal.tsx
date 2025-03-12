@@ -44,6 +44,8 @@ const ApplyModal = ({ isModalOpen, setIsModalOpen }: ApplyModalProps) => {
       isOpen={isModalOpen}
       onClose={handleClose}
       title={submitted ? "Submitted" : "Join"}
+      onSubmit={submit}
+      isActive={!submitted}
     >
       <div className="w-full text-[1em] text-gray-800 flex flex-col justify-start items-start">
         <div className="text-left">
