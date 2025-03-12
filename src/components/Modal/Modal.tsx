@@ -6,8 +6,8 @@ interface ModalProps {
   onClose: () => void;
   children: React.ReactNode;
   title?: string;
-  onClickSubButton?: () => void;
-  subButtonText?: string;
+  onSubmit?: () => void;
+  submitText?: string;
   large?: boolean;
   isHr?: boolean;
 }
@@ -17,8 +17,8 @@ export const Modal = ({
   onClose,
   children,
   title,
-  onClickSubButton,
-  subButtonText,
+  onSubmit,
+  submitText,
   large,
   isHr = true,
 }: ModalProps) => {
@@ -70,21 +70,6 @@ export const Modal = ({
           {title && (
             <h2 className="text-lg font-semibold text-left">{title}</h2>
           )}
-          {onClickSubButton && (
-            <button
-              onClick={onClickSubButton}
-              className="text-gray-900 bg-gray-200 rounded-lg px-4 py-1.5 flex items-center gap-4 text-sm font-medium whitespace-nowrap hover:bg-gray-300"
-            >
-              <Image
-                src="/svgs/sound_wave.svg"
-                alt="sound-wave"
-                width={0}
-                height={0}
-                style={{ width: "16px", height: "16px" }}
-              />
-              {subButtonText && subButtonText}
-            </button>
-          )}
           <button
             onClick={onClose}
             className="hover:bg-gray-200 p-2 rounded-md"
@@ -101,6 +86,20 @@ export const Modal = ({
         {/* modal content */}
         {isHr && <hr className="mx-6 bg-gray-300 border-1 border-gray-300" />}
         <div className={`${isHr ? "p-6" : "px-6 pb-6"}`}>{children}</div>
+        <div className="flex flex-row gap-2 w-full justify-between items-center px-6 mb-6 mt-2">
+          <button
+            onClick={onClose}
+            className="text-black border border-gray-300 rounded-md w-full text-center py-2 font-medium whitespace-nowrap hover:bg-gray-100"
+          >
+            cancel
+          </button>
+          <button
+            onClick={onSubmit}
+            className="text-white bg-gray-900 rounded-md w-full text-center py-2 font-medium whitespace-nowrap hover:opacity-90"
+          >
+            {submitText ? submitText : "submit"}
+          </button>
+        </div>
       </div>
     </div>
   );

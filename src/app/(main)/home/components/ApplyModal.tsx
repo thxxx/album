@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Modal } from "@/components/Modal/Modal";
-import { v4 } from "uuid";
 import { insertApplication } from "@/service/applyService";
 
 const border_style =
@@ -80,18 +79,8 @@ const ApplyModal = ({ isModalOpen, setIsModalOpen }: ApplyModalProps) => {
           </>
         )}
       </div>
-      <div className="flex justify-end items-end pt-2">
-        {!submitted && (
-          <button
-            className="text-white bg-new-black rounded-md px-8 py-1.5 mt-4 flex items-center gap-4 text-md font-medium whitespace-nowrap hover:opacity-90 w-auto"
-            onClick={submit}
-          >
-            Join
-          </button>
-        )}
-      </div>
     </Modal>
   );
 };
 
-export default ApplyModal;
+export default React.memo(ApplyModal);
