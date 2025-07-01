@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
   // PORT_API_KEY 요청
   // DB에서 UID로 이미 있는지 검사, 있으면 바로 반환. 없으면 만들어서 반환
   try {
-    // const apikey = getApikeyFromUid(body.uid);
+    // const apikey = await getApikeyFromUid(body.uid);
     const apiKey = null;
 
     if (apiKey !== null) {
@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
       const apiKey = await portkey.apiKeys.create({
         name: "API_KEY_NAME_0909",
         type: "organisation",
-        "sub-type": "user",
+        "sub-type": "service",
         workspace_id: process.env.WORKSPACE_ID,
         scopes: [
           // "logs.export",
