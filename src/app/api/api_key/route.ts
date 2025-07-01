@@ -110,9 +110,9 @@ export async function POST(req: NextRequest) {
         },
       });
     }
-  } catch {
+  } catch (e) {
     return NextResponse.json({
-      message: "POST 요청 실패!",
+      message: `POST FAILED ${e}`,
       data: {
         newVkey: "none",
         status: 400,
