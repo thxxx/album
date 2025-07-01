@@ -10,14 +10,10 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-
-  // PORT_API_KEY 요청
-  // DB에서 이미 있는지 검사, 있으면 바로 반환
-
-  // PORT_VIRTUAL_KEY 요청
-  // DB에서 최근 1시간 이내의 vk가 있는지 검사, 없으면 만들어서 반환
-
   try {
+    // PORT_VIRTUAL_KEY 요청
+    // DB에서 최근 1시간 이내의 vk가 있는지 검사, 없으면 만들어서 반환
+
     const portkey = new Portkey({
       apiKey: body.key,
       dangerouslyAllowBrowser: true,
@@ -41,7 +37,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       message: "POST 요청 실패!",
       data: {
-        newVkey: "",
+        newVkey: "none",
         status: 400,
       },
     });

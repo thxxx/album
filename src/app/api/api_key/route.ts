@@ -15,17 +15,23 @@ export async function POST(req: NextRequest) {
   // DB에서 이미 있는지 검사, 있으면 바로 반환. 없으면 만들어서 반환
   try {
     if (body.uid === "abcdefg") {
-      return "";
+      return NextResponse.json({
+        message: "POST 요청 성공!",
+        data: {
+          newVkey: "none",
+          status: 200,
+        },
+      });
     } else {
       const portkey = new Portkey({
-        apiKey: "LtxtyOnxi+fOa4EEtvcel9qgrtT0",
+        apiKey: process.env.ADMIN_API_KEY,
       });
 
       const apiKey = await portkey.apiKeys.create({
         name: "API_KEY_NAME_0909",
         type: "organisation",
         "sub-type": "service",
-        workspace_id: "ws-shared-204e6c",
+        workspace_id: process.env.WORKSPACE_ID,
         scopes: [
           "logs.export",
           "logs.list",
@@ -56,7 +62,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       message: "POST 요청 실패!",
       data: {
-        newVkey: "",
+        newVkey: "none",
         status: 400,
       },
     });
