@@ -52,31 +52,20 @@ const Home = () => {
   return (
     <Layout>
       <div className="bg-white flex justify-center items-center text-center flex-col w-full">
-        {/* header */}
-        <Header />
-        {/* hero */}
+        {/* <Header />
         <HeroSection />
-        {/* Team intro */}
         <Teamintro />
-        {/* Feature section 1 */}
         <FeatureSection1 />
-        {/* Feature section 2 */}
         <FeatureSection2 />
-        {/* Feature section 3 */}
         <FeatureSection3 />
-        {/* Feature section 4 */}
         <FeatureSection4 />
-        {/* Free section */}
         <FreeSection />
-        {/* Last section */}
         <LastSection />
-        {/* Footer */}
         <Footer />
-
         <ApplyModal
           isModalOpen={isPreApplyModalOpen}
           setIsModalOpen={setIsPreApplyModalOpen}
-        />
+        /> */}
       </div>
     </Layout>
   );
