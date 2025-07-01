@@ -10,17 +10,26 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
+  if (!body.uid) {
+    return NextResponse.json({
+      message: "request failed. cannot find uid.",
+      data: {
+        newVkey: "none",
+        status: 200,
+      },
+    });
+  }
+
   try {
     // PORT_VIRTUAL_KEY 요청
     // DB에서 최근 1시간 이내의 vk가 있는지 검사, 없으면 만들어서 반환
-
     const portkey = new Portkey({
-      apiKey: body.key,
+      apiKey: process.env.ADMIN_API_KEY,
       dangerouslyAllowBrowser: true,
     });
 
     const newVkey = await portkey.virtualKeys.create({
-      name: "openai-VKey",
+      name: `openai-vkey-${body.uid.slice(0, 5)}`,
       provider: "openai",
       key: process.env.OPENAI_KEY,
       expires_at: "2025-07-01T21:28:24.650Z",
