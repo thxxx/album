@@ -11,6 +11,14 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   const body = await req.json();
 
+  return NextResponse.json({
+    message: "POST 요청 성공!",
+    data: {
+      body: body,
+      status: 200,
+    },
+  });
+
   try {
     const portkey = new Portkey({
       apiKey: body.key,
